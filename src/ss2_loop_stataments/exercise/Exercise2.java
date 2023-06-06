@@ -1,10 +1,15 @@
-package loop_stataments.exercise;
+package ss2_loop_stataments.exercise;
 
 import java.util.Scanner;
 
-public class Exercise3 {
+public class Exercise2 {
     public static void main(String[] args) {
-        int numberCheck = 2;
+        int countPrime = 0;
+        int numberCheck = 1;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Bạn muốn bao nhiêu số nguyên tố?");
+        int number = scanner.nextInt();
         do {
             int count = 0;
             for (int i = 1; i <= numberCheck; i++) {
@@ -14,8 +19,9 @@ public class Exercise3 {
             }
             if (count == 2) {
                 System.out.println(numberCheck + "\n");
+                countPrime++;
             }
             numberCheck++;
-        } while (numberCheck <= 100);
+        } while (countPrime < 20);
     }
 }

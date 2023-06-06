@@ -1,4 +1,4 @@
-package loop_stataments.practice;
+package ss2_loop_stataments.practice;
 
 import java.util.Scanner;
 
