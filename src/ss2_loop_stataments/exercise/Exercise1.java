@@ -6,7 +6,6 @@ public class Exercise1 {
     public static void main(String[] args) {
         boolean flag = true;
         do {
-            int choice = -1;
             Scanner scanner = new Scanner(System.in);
             System.out.println("Menu");
             System.out.println("1. Print the rectangle");
@@ -14,7 +13,7 @@ public class Exercise1 {
             System.out.println("3. Print isosceles triangle");
             System.out.println("4. Exit");
             System.out.println("Enter your choice");
-            choice = scanner.nextInt();
+            int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
                     System.out.println("1. Print the rectangle");
