@@ -19,9 +19,7 @@ public class Exercise7 {
         }
         int sum = 0;
         for (int i = 0; i < m; i++) {
-            if (i == i) {
-                sum += array[i][i];
-            }
+            sum += array[i][i];
         }
         System.out.println("Tổng là : " + sum);
     }
