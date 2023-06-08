@@ -8,10 +8,7 @@ public class Main {
         StopWatch time = new StopWatch();
         boolean flag = true;
         do {
-            System.out.println("Menu" +
-                    "\n1. Start" +
-                    "\n2. End"
-            );
+            System.out.println("Menu" + "\n1. Start" + "\n2. End");
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:

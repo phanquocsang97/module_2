@@ -2,6 +2,7 @@ package ss4_oops.exercise.exercise1;
 
 public class QuadraticEquation {
     double a, b, c;
+
     public double getA() {
         return a;
     }
