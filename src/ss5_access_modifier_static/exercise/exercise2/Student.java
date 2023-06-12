@@ -21,12 +21,10 @@ public class Student {
 
         this.classes = classes;
     }
+
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", classes='" + classes + '\'' +
-                '}';
+        return "Student{" + "name='" + name + '\'' + ", classes='" + classes + '\'' + '}';
     }
 
     public String getName() {
@@ -41,7 +39,7 @@ public class Student {
 
     public static void main(String[] args) {
         Student student = new Student();
-        Student student1 = new Student("sang","co4");
+        Student student1 = new Student("sang", "co4");
 
         student.setName("Sang");
         student.setClasses("C0423G1");
