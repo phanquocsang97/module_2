@@ -1,39 +1,40 @@
-package ss8_clean_code.exercise;
+package ss8_refactoring.exercise;
 
 public class TennisGame {
     public static final char ZEROPOINT = 0;
     public static final char ONEPOINT = 1;
     public static final char TWOPOINT = 2;
     public static final char THREEPOINT = 3;
-    public static final char MATCHPOINT = 4;
+    public static final char IMPORTANTPOINT = 4;
 
 
-    public static String getScore(int player1Score, int player2Score) {
+    public static String showEqualsPoint(int player1Score) {
         String total = "";
-        int tempScore = 0;
+        switch (player1Score) {
+            case ZEROPOINT:
+                total = "Love-All";
+                break;
+            case ONEPOINT:
+                total = "Fifteen-All";
+                break;
+            case TWOPOINT:
+                total = "Thirty-All";
+                break;
+            case THREEPOINT:
+                total = "Forty-All";
+                break;
+            default:
+                total = "Deuce";
+                break;
 
+        }
+        return total;
+    }
 
-        if (player1Score == player2Score) {
-            switch (player1Score) {
-                case ZEROPOINT:
-                    total = "Love-All";
-                    break;
-                case ONEPOINT:
-                    total = "Fifteen-All";
-                    break;
-                case TWOPOINT:
-                    total = "Thirty-All";
-                    break;
-                case THREEPOINT:
-                    total = "Forty-All";
-                    break;
-                default:
-                    total = "Deuce";
-                    break;
+    public static String showAvantagePoint(int player1Score, int player2Score) {
+        String total = " ";
+        if (player1Score >= IMPORTANTPOINT || player2Score >= IMPORTANTPOINT) {
 
-            }
-
-        } else if (player1Score >= MATCHPOINT || player2Score >= MATCHPOINT) {
             int minusResultPoint = player1Score - player2Score;
             if (minusResultPoint == 1) {
                 total = "Advantage player1";
@@ -44,6 +45,17 @@ public class TennisGame {
             } else {
                 total = "Win for player2";
             }
+        }
+        return total;
+    }
+
+    public static String showResult(int player1Score, int player2Score) {
+        String total = " ";
+        int tempScore = 0;
+        if (player1Score == player2Score) {
+            return showEqualsPoint(player1Score);
+        } else if (player1Score >= IMPORTANTPOINT || player2Score >= IMPORTANTPOINT) {
+            return showAvantagePoint(player1Score, player2Score);
         } else {
             for (int i = 1; i < 3; i++) {
                 if (i == 1) {
@@ -66,8 +78,12 @@ public class TennisGame {
                         total += "Forty";
                         break;
                 }
+
             }
         }
         return total;
     }
+
 }
+
+
