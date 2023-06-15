@@ -1,4 +1,4 @@
-package mvc.Model;
+package mvc.model;
 
 public class Teacher {
     private int id;

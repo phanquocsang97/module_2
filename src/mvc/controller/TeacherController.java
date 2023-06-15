@@ -1,6 +1,6 @@
-package mvc.Controller;
+package mvc.controller;
 
-import mvc.Service.TeacherService;
+import mvc.service.TeacherService;
 
 import java.util.Scanner;
 

@@ -1,10 +1,8 @@
-package mvc.Repository;
+package mvc.repository;
 
-import mvc.Model.Teacher;
+import mvc.model.Teacher;
 
-import javax.jws.Oneway;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class TeacherRepository implements ITeacherRepository {
 
