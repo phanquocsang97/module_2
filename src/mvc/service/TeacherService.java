@@ -28,13 +28,16 @@ public class TeacherService implements ITeacherService {
         boolean gender = Boolean.parseBoolean(scanner.nextLine());
         System.out.println("Nhập môn học");
         String major = scanner.nextLine();
-        Teacher teacher = new Teacher(id,name,gender,major);
+        Teacher teacher = new Teacher(id, name, gender, major);
         teacherRepository.add(teacher);
 
     }
 
     @Override
     public void delete() {
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập id bạn muốn xóa");
+        int id = Integer.parseInt(scanner.nextLine());
+        teacherRepository.delete(id);
     }
 }

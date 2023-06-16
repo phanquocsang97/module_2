@@ -20,14 +20,16 @@ public class TeacherController {
             int choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
                 case 1:
-                    System.out.println("Chức năng hiển thị");
+                    System.out.println("Hiển thị danh sách");
                     teacherService.display();
                     break;
                 case 2:
                     System.out.println("Thêm mới");
                     teacherService.add();
+                    break;
                 case 3:
                     System.out.println("Xóa");
+                    teacherService.delete();
                     break;
                 default:
                     flag = false;

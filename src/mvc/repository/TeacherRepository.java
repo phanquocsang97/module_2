@@ -10,7 +10,7 @@ public class TeacherRepository implements ITeacherRepository {
 
     static {
         teacherArraysList.add(new Teacher(1, "Sang", true, "Math"));
-        teacherArraysList.add(new Teacher(2, "Thiện", true, "Physics"));
+        teacherArraysList.add(new Teacher(2, "Thiện", true, "English"));
         teacherArraysList.add(new Teacher(3, "Hải", true, "Chemistry"));
     }
 
@@ -26,6 +26,11 @@ public class TeacherRepository implements ITeacherRepository {
     }
 
     @Override
-    public void delete() {
+    public void delete(int id) {
+        for (int i = 0; i < teacherArraysList.size(); i++) {
+            if (id == teacherArraysList.get(i).getId()){
+                teacherArraysList.remove(teacherArraysList.get(i));
+            }
+        }
     }
 }
