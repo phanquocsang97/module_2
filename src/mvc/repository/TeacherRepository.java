@@ -28,7 +28,7 @@ public class TeacherRepository implements ITeacherRepository {
     @Override
     public void delete(int id) {
         for (int i = 0; i < teacherArraysList.size(); i++) {
-            if (id == teacherArraysList.get(i).getId()){
+            if (id == teacherArraysList.get(i).getId()) {
                 teacherArraysList.remove(teacherArraysList.get(i));
             }
         }

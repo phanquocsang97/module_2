@@ -5,9 +5,9 @@ import mvc.service.TeacherService;
 import java.util.Scanner;
 
 public class TeacherController {
-    private static TeacherService teacherService = new TeacherService();
+    private final TeacherService teacherService = new TeacherService();
 
-    public static void showMenu() {
+    public void showMenu() {
         Scanner scanner = new Scanner(System.in);
         boolean flag = true;
         do {
