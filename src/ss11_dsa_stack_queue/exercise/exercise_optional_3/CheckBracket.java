@@ -12,32 +12,20 @@ public class CheckBracket {
         System.out.println(checkBracket(str3));
     }
 
-    public static String checkBracket(String str) {
-        String[] arrStr = str.split("");
-        Stack<String> strSym = new Stack<>();
-        for (int i = 0; i < arrStr.length; i++) {
-            if (arrStr[i].equals("(")) {
-                strSym.push(arrStr[i]);
-            } else if (arrStr[i].equals(")")) {
-                if (strSym.isEmpty()) {
-                    return "???";
-                }
-
-            }
-        }
-        for (int i = 0; i < arrStr.length; i++) {
-            if (arrStr[i].equals(")")) {
-                if (!strSym.isEmpty()) {
-                    strSym.pop();
+    public static boolean checkBracket(String str1) {
+        Stack<Character> strCheck = new Stack<>();
+        for (int i = 0; i < str1.length(); i++) {
+            char x = str1.charAt(i);
+            if (x == '(' || x == ')') {
+                if (strCheck.isEmpty()) {
+                    strCheck.push(x);
+                } else if (strCheck.get(0) == '(' && x == ')') {
+                    strCheck.pop();
                 } else {
-                    return "???";
+                    strCheck.push(x);
                 }
             }
         }
-        if (strSym.isEmpty()) {
-            return "well";
-        } else {
-            return "???";
-        }
+        return strCheck.isEmpty();
     }
 }
