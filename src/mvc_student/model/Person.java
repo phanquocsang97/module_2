@@ -1,19 +1,19 @@
-package mvc.model;
+package mvc_student.model;
 
-public class Teacher {
-    private int id;
-    private String name;
-    private boolean gender;
-    private String major;
+public abstract class Person {
+    protected int id;
+    protected String name;
+    protected boolean gender;
+    protected String dateOfBirth;
 
-    public Teacher() {
+    public Person() {
     }
 
-    public Teacher(int id, String name, boolean gender, String major) {
+    public Person(int id, String name, boolean gender, String dateOfBirth) {
         this.id = id;
         this.name = name;
         this.gender = gender;
-        this.major = major;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public int getId() {
@@ -40,21 +40,21 @@ public class Teacher {
         this.gender = gender;
     }
 
-    public String getMajor() {
-        return major;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setMajor(String major) {
-        this.major = major;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     @Override
     public String toString() {
-        return "Teacher{" +
+        return "Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", gender=" + gender +
-                ", major='" + major + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
                 '}';
     }
 }

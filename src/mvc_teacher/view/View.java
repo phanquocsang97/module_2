@@ -1,9 +1,6 @@
-package mvc.view;
+package mvc_teacher.view;
 
-import mvc.controller.TeacherController;
-import mvc.model.Teacher;
-
-import java.util.ArrayList;
+import mvc_teacher.controller.TeacherController;
 
 public class View {
     public static void main(String[] args) {

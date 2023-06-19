@@ -1,6 +1,6 @@
-package mvc.repository;
+package mvc_teacher.repository;
 
-import mvc.model.Teacher;
+import mvc_teacher.model.Teacher;
 
 import java.util.ArrayList;
 

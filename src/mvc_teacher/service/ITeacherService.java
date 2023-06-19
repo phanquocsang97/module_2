@@ -1,4 +1,4 @@
-package mvc.service;
+package mvc_teacher.service;
 
 public interface ITeacherService {
     void display();

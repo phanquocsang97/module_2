@@ -1,13 +1,12 @@
-package mvc.controller;
+package mvc_student.controller;
 
-import mvc.service.TeacherService;
+import mvc_student.service.StudentService;
 
 import java.util.Scanner;
 
-public class TeacherController {
-    private final TeacherService teacherService = new TeacherService();
-
-    public void showMenu() {
+public class Controller {
+    StudentService studentService = new StudentService();
+    public void showMenu(){
         Scanner scanner = new Scanner(System.in);
         boolean flag = true;
         do {
@@ -21,19 +20,23 @@ public class TeacherController {
             switch (choose) {
                 case 1:
                     System.out.println("Hiển thị danh sách");
-                    teacherService.display();
+                    studentService.display();
                     break;
                 case 2:
                     System.out.println("Thêm mới");
-                    teacherService.add();
+                    studentService.add();
                     break;
                 case 3:
                     System.out.println("Xóa");
-                    teacherService.delete();
+                    studentService.remove();
                     break;
+                case 4:
+                    System.exit(0);
                 default:
                     flag = false;
             }
         } while (flag);
     }
+
+
 }

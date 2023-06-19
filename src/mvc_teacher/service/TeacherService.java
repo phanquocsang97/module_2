@@ -1,7 +1,7 @@
-package mvc.service;
+package mvc_teacher.service;
 
-import mvc.model.Teacher;
-import mvc.repository.TeacherRepository;
+import mvc_teacher.model.Teacher;
+import mvc_teacher.repository.TeacherRepository;
 
 import java.util.ArrayList;
 import java.util.Scanner;
