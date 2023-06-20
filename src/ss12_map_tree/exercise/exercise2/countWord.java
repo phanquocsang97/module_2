@@ -19,7 +19,7 @@ public class countWord {
             }
         }
         for (Map.Entry<String,Integer> stringIntegerEntry:countWord.entrySet()) {
-            System.out.println(stringIntegerEntry.getKey() + " 'apperance' " + stringIntegerEntry.getValue() + " times ");
+            System.out.println(stringIntegerEntry.getKey() + " 'appearance' " + stringIntegerEntry.getValue() + " times ");
         }
     }
 }
