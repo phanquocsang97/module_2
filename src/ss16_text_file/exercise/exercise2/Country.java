@@ -1,6 +1,7 @@
 package ss16_text_file.exercise.exercise2;
 
-public class Country {private int id;
+public class Country {
+    private int id;
     private String code;
     private String name;
 
