@@ -2,6 +2,7 @@ package ss17_binary_file.exercise.exercise1.service;
 
 import ss17_binary_file.exercise.exercise1.common.IdNotFound;
 import ss17_binary_file.exercise.exercise1.model.Product;
+import ss17_binary_file.exercise.exercise1.repo.IProductRepository;
 import ss17_binary_file.exercise.exercise1.repo.ProductRepository;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 import static ss17_binary_file.exercise.exercise1.view.Main.scanner;
 
 public class ProductService implements IProductService {
-    ProductRepository productRepository = new ProductRepository();
+    IProductRepository productRepository = new ProductRepository();
 
 
     @Override

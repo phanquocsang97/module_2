@@ -1,11 +1,12 @@
 package ss17_binary_file.exercise.exercise1.controller;
 
+import ss17_binary_file.exercise.exercise1.service.IProductService;
 import ss17_binary_file.exercise.exercise1.service.ProductService;
 
 import static ss17_binary_file.exercise.exercise1.view.Main.scanner;
 
 public class ProductController {
-    ProductService productService = new ProductService();
+    IProductService productService = new ProductService();
 
     public void showMenuProduct() {
         do {
