@@ -11,22 +11,22 @@ public class PromotionManagement {
     public void selectPromotion() {
         boolean flag = true;
         do {
-            System.out.println("-----PROMOTION MANAGEMENT-----\n" +
-                    "1. Display list Promotion\n" +
-                    "2. Add new Promotion\n" +
-                    "3. Return main menu\n" +
-                    "Enter your choice here : ");
+            System.out.println("-----QUẢN LÍ CÁC ƯU ĐÃI-----\n" +
+                    "1. Hiển thị danh sách ưu đãi\n" +
+                    "2. Thêm mới các ưu đãi\n" +
+                    "3. Quay lại menu chính\n" +
+                    "Nhập lựa chọn của bạn : ");
             try {
                 int choose = Integer.parseInt(scanner.nextLine());
                 switch (choose) {
                     case 1:
-                        System.out.println("Display list customers use service");
+                        System.out.println("Hiển thị danh sách khách hàng sử dụng dịch vụ");
                         break;
                     case 2:
-                        System.out.println("Display list customers get voucher");
+                        System.out.println("Hiển thị danh sách có khuyến mãi");
                         break;
                     case 3:
-                        System.out.println("Return Main Menu");
+                        System.out.println("Quay lại menu chính");
                         flag = false;
                         break;
                 }

@@ -60,17 +60,23 @@ public class Employee extends Person{
     }
     @Override
     public String toString() {
+        String sexEmployee;
+        if (gender){
+            sexEmployee = "man";
+        }else {
+            sexEmployee = "lady";
+        }
         return "Employee{" +
                 "idEmployee='" + idEmployee + '\'' +
-                ", levelEmployee='" + levelEmployee + '\'' +
-                ", positionEmployee='" + positionEmployee + '\'' +
-                ", salaryEmployee='" + salaryEmployee + '\'' +
-                ", name='" + name + '\'' +
-                ", date='" + date + '\'' +
-                ", gender=" + gender +
-                ", identityNumber=" + identityNumber +
-                ", phoneNumber=" + phoneNumber +
-                ", email='" + email + '\'' +
+                ", nameEmployee ='" + name + '\'' +
+                ", dateEmployee ='" + date + '\'' +
+                ", genderEmployee ='" + sexEmployee + '\'' +
+                ", identityEmployee ='" + identityNumber + '\'' +
+                ", phoneNumberEmployee ='" + phoneNumber + '\'' +
+                ", emailEmployee =" + email +
+                ", levelEmployee =" + levelEmployee +
+                ", positionEmployee =" + positionEmployee +
+                ", salaryEmployee ='" + salaryEmployee + '\'' +
                 '}';
     }
 

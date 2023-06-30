@@ -7,14 +7,14 @@ public class FuramaController {
 
     public void displayMainMenu() {
         do {
-            System.out.println("-----WORK MANAGEMENT-----\n" +
-                    "1. Employee Management\n" +
-                    "2. Customer Management\n" +
-                    "3. Facility Management\n" +
-                    "4. Booking Management\n" +
-                    "5. Promotion Management\n" +
-                    "6. Exit\n" +
-                    "Enter your choice here : ");
+            System.out.println("-----QUẢN LÍ CÔNG VIỆC-----\n" +
+                    "1. Quản lí nhân sự\n" +
+                    "2. Quản lí khách hàng\n" +
+                    "3. Quản lí cơ sở vật chất\n" +
+                    "4. Quản lí đơn đặt hàng\n" +
+                    "5. Quản lí các ưu đãi\n" +
+                    "6. Thoát chương trình\n" +
+                    "Nhập lựa chọn của bạn : ");
             int choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
                 case 1:
@@ -38,7 +38,7 @@ public class FuramaController {
                     promotionManagement.selectPromotion();
                     break;
                 case 6:
-                    System.out.println("-----EXIT PROGRAM-----");
+                    System.out.println("-----THOÁT CHƯƠNG TRÌNH-----");
                     System.exit(0);
             }
         } while (true);

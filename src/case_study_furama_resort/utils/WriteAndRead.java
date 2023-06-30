@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WriteAndRead {
-    public static void writeFile(String pathFile, String text,boolean append) {
+    public static void writeFile(String pathFile, String text, boolean append) {
         File file = new File(pathFile);
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
         try {
-            fileWriter = new FileWriter(file,append);
+            fileWriter = new FileWriter(file, append);
             bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.write(text);
             bufferedWriter.newLine();
@@ -25,7 +25,8 @@ public class WriteAndRead {
             }
         }
     }
-    public static void writeFileByList(String pathFile, List<String> text, boolean append){
+
+    public static void writeFileByList(String pathFile, List<String> text, boolean append) {
         File file = new File(pathFile);
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;

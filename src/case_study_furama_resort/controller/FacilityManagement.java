@@ -9,30 +9,30 @@ public class FacilityManagement {
         Scanner scanner = new Scanner(System.in);
         boolean flag = true;
         do {
-            System.out.println("-----FACILITY MANAGEMENT-----\n" +
-                    "1. Display list facility\n" +
-                    "2. Add new facility\n" +
-                    "3. Display list facility maintenance\n" +
-                    "4. Return main menu\n" +
-                    "Enter your choice here : ");
+            System.out.println("-----QUẢN LÍ CƠ SỞ VẬT CHẤT-----\n" +
+                    "1. Hiển thị danh sách sơ sở\n" +
+                    "2. Thêm mới cơ sở\n" +
+                    "3. Hiển thị danh sách bảo trì cơ sở\n" +
+                    "4. Quay lại menu chính\n" +
+                    "Nhập lựa chọn của bạn : ");
             try {
                 int choose = Integer.parseInt(scanner.nextLine());
                 switch (choose) {
                     case 1:
-                        System.out.println("Display List Facility");
+                        System.out.println("Hiển thị danh sách cơ sở");
                         break;
                     case 2:
-                        System.out.println("Add New Facility");
+                        System.out.println("Thêm mới cơ sở");
                         break;
                     case 3:
-                        System.out.println("Display list facility maintenance");
+                        System.out.println("Hiển thị danh sách bảo trì cơ sở");
                         break;
                     case 4:
-                        System.out.println("Return Main Menu");
+                        System.out.println("Quay lại menu chính");
                         flag = false;
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Try again");
+                System.out.println("Vui lòng nhập lại");
             }
         } while (flag);
     }

@@ -10,8 +10,7 @@ import java.util.List;
 public class EmployeeRepository implements IEmployeeRepository {
     Employee employee = new Employee();
     private final String EMPLOYEE_PATH_FILE = "D:\\CodeGym\\Module 2\\src\\case_study_furama_resort\\data\\employee.csv";
-    private  static List<Employee> employeeList = new ArrayList<>();
-    public final static String COMMAA = ",";
+
 
     @Override
     public void editEmployee(int index, Employee employee) {
@@ -35,18 +34,19 @@ public class EmployeeRepository implements IEmployeeRepository {
         String[] info = null;
         for (String s : stringList) {
             info = s.split(",");
-            Employee employee = new Employee(info[0],info[1],info[2],Boolean.parseBoolean(info[3]),info[4],info[5],info[6],info[7],info[8],info[9]);
+            employee = new Employee(info[0],info[1],info[2],Boolean.parseBoolean(info[3]),info[4],info[5],info[6],info[7],info[8],info[9]);
             employeeList.add(employee);
         }
         return employeeList;
     }
-    public int searchId(String id){
+    public int searchIdEmployee(String id){
         List<Employee> list = displayListEmployee();
+        int index = -1;
         for (int i = 0; i < list.size(); i++) {
             if (id.equals(list.get(i).getIdEmployee())){
-                return i;
+                index = i;
             }
         }
-        return -1;
+        return index;
     }
 }

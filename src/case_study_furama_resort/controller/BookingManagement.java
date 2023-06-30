@@ -8,39 +8,39 @@ public class BookingManagement {
         Scanner scanner = new Scanner(System.in);
         boolean flag = true;
         do {
-            System.out.println("-----BOOKING MANAGEMENT-----\n" +
-                    "1. Add new booking\n" +
-                    "2. Display list booking\n" +
-                    "3. Create new contracts\n" +
-                    "4. Display list contracts\n" +
-                    "5. Edit contracts\n" +
-                    "6. Return main menu\n" +
-                    "Enter your choice here : ");
+            System.out.println("-----QUẢN LÍ BOOKING-----\n" +
+                    "1. Thêm mới booking\n" +
+                    "2. Hiển thị danh sách booking\n" +
+                    "3. Tạo hợp đồng mới\n" +
+                    "4. Hiển thị danh sách hợp đồng\n" +
+                    "5. Chỉnh sửa hợp đồng\n" +
+                    "6. Quay lại menu chính\n" +
+                    "Nhập lựa chọn của bạn : ");
             try {
                 int choose = Integer.parseInt(scanner.nextLine());
                 switch (choose) {
                     case 1:
-                        System.out.println("Add New Booking");
+                        System.out.println("Thêm mới Booking");
                         break;
                     case 2:
-                        System.out.println("Display list booking");
+                        System.out.println("Hiển thị danh sách booking");
                         break;
                     case 3:
-                        System.out.println("Create new contracts");
+                        System.out.println("Tạo hợp đồng mới");
                         break;
                     case 4:
-                        System.out.println("Display list contracts");
+                        System.out.println("Hiên thị danh sách hợp đồng");
                         break;
                     case 5:
-                        System.out.println("Edit contracts");
+                        System.out.println("Chỉnh sửa hợp đồng");
                         break;
                     case 6:
-                        System.out.println("Return main menu");
+                        System.out.println("Quay lại menu chính");
                         flag = false;
                         break;
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Try again");
+                System.out.println("Vui lòng nhập lại");
             }
         } while (flag);
     }

@@ -14,36 +14,36 @@ public class EmployeeManagement {
         IEmployeeService employeeService = new EmployeeService();
         boolean flag = true;
         do {
-            System.out.println("-----EMPLOYEES MANAGEMENT-----\n" +
-                    "1. Display list employees\n" +
-                    "2. Add new employee\n" +
-                    "3. Edit employee\n" +
-                    "4. Return main menu\n" +
-                    "Enter your choice here : ");
+            System.out.println("-----QUẢN LÍ NHÂN VIÊN-----\n" +
+                    "1. Hiển thị danh sách nhân viên\n" +
+                    "2. Thêm mới nhân viên\n" +
+                    "3. Chỉnh sửa nhân viên\n" +
+                    "4. Quay lại menu chính\n" +
+                    "Nhập lựa chọn của bạn : ");
 
             try {
                 int choose = Integer.parseInt(scanner.nextLine());
 
                 switch (choose) {
                     case 1:
-                        System.out.println("Display List Employees");
+                        System.out.println("Hiển thị danh sách nhân viên");
                         employeeService.displayListEmployee();
                         break;
                     case 2:
-                        System.out.println("Add New Employees");
+                        System.out.println("Thêm mới nhân viên");
                         employeeService.addNewEmployee();
                         break;
                     case 3:
-                        System.out.println("Edit Employees");
+                        System.out.println("Chỉnh sửa nhân viên");
                         employeeService.editEmployee();
                         break;
                     case 4:
-                        System.out.println("Return Main Menu");
+                        System.out.println("Quay lại menu chính");
                         flag = false;
                         break;
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Try again");
+                System.out.println("Vui lòng nhập lại");
             }
         } while (flag);
     }

@@ -8,5 +8,5 @@ public interface IEmployeeRepository extends IGeneralRepository{
     void editEmployee(int index, Employee employee);
     void addNewEmployee(Employee employee);
     List<Employee> displayListEmployee();
-     int searchId(String id);
+     int searchIdEmployee(String id);
 }
