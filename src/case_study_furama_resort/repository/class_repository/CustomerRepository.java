@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerRepository implements ICustomerRepository {
-    Customer customer = new Customer();
     private final String CUSTOMER_PATH_FILE = "D:\\CodeGym\\Module 2\\src\\case_study_furama_resort\\data\\customer.csv";
 
     @Override
@@ -26,7 +25,7 @@ public class CustomerRepository implements ICustomerRepository {
         String[] info = null;
         for (String s : stringList) {
             info = s.split(",");
-            customer = new Customer(info[0], info[1], info[2], Boolean.parseBoolean(info[3]), info[4], info[5], info[6], info[7], info[8]);
+          Customer  customer = new Customer(info[0], info[1], info[2], Boolean.parseBoolean(info[3]), info[4], info[5], info[6], info[7], info[8]);
             customerList.add(customer);
         }
         return customerList;

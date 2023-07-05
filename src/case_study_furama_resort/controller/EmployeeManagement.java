@@ -8,9 +8,10 @@ import java.util.Scanner;
 
 
 public class EmployeeManagement {
-    Scanner scanner = new Scanner(System.in);
+
 
     public void selectEmployee() {
+        Scanner scanner = new Scanner(System.in);
         IEmployeeService employeeService = new EmployeeService();
         boolean flag = true;
         do {

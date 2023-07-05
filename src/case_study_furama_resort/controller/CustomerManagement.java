@@ -7,9 +7,10 @@ import case_study_furama_resort.service.interface_service.ICustomerService;
 import java.util.Scanner;
 
 public class CustomerManagement {
-    Scanner scanner = new Scanner(System.in);
+
 
     public void selectCustomer() {
+        Scanner scanner = new Scanner(System.in);
         ICustomerService customerService = new CustomerService();
         boolean flag = true;
         do {

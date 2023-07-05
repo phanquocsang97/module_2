@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeRepository implements IEmployeeRepository {
-    Employee employee = new Employee();
     private final String EMPLOYEE_PATH_FILE = "D:\\CodeGym\\Module 2\\src\\case_study_furama_resort\\data\\employee.csv";
 
 
@@ -34,7 +33,7 @@ public class EmployeeRepository implements IEmployeeRepository {
         String[] info = null;
         for (String s : stringList) {
             info = s.split(",");
-            employee = new Employee(info[0],info[1],info[2],Boolean.parseBoolean(info[3]),info[4],info[5],info[6],info[7],info[8],info[9]);
+         Employee employee = new Employee(info[0],info[1],info[2],Boolean.parseBoolean(info[3]),info[4],info[5],info[6],info[7],info[8],info[9]);
             employeeList.add(employee);
         }
         return employeeList;

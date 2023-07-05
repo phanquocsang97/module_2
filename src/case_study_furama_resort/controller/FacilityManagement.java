@@ -1,12 +1,14 @@
 package case_study_furama_resort.controller;
 
+import case_study_furama_resort.service.class_service.facility.FacilityService;
+import case_study_furama_resort.service.interface_service.IFacilityService;
+
 import java.util.Scanner;
 
 public class FacilityManagement {
-    Scanner scanner = new Scanner(System.in);
-
     public void selectFacility() {
         Scanner scanner = new Scanner(System.in);
+        IFacilityService facilityService = new FacilityService();
         boolean flag = true;
         do {
             System.out.println("-----QUẢN LÍ CƠ SỞ VẬT CHẤT-----\n" +
@@ -20,9 +22,11 @@ public class FacilityManagement {
                 switch (choose) {
                     case 1:
                         System.out.println("Hiển thị danh sách cơ sở");
+                        facilityService.displayListFacility();
                         break;
                     case 2:
                         System.out.println("Thêm mới cơ sở");
+                        facilityService.addNewFacility();
                         break;
                     case 3:
                         System.out.println("Hiển thị danh sách bảo trì cơ sở");

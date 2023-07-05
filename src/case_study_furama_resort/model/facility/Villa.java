@@ -48,15 +48,15 @@ public class Villa extends Facility{
     @Override
     public String toString() {
         return "Villa{" +
-                "kindOfRoom='" + kindOfRoom + '\'' +
-                ", areaPool='" + areaPool + '\'' +
-                ", floor=" + floor +
-                ", idService='" + idService + '\'' +
-                ", nameService='" + nameService + '\'' +
-                ", areaService='" + areaService + '\'' +
-                ", costService=" + costService +
-                ", peopleService=" + peopleService +
-                ", kindOfRentService='" + kindOfRentService + '\'' +
+                "idVilla='" + idService + '\'' +
+                ", nameVilla='" + nameService + '\'' +
+                ", areaVilla=" + areaService +
+                ", costHouse='" + costService + '\'' +
+                ", peopleVilla='" + peopleService + '\'' +
+                ", kindOfRentVilla='" + kindOfRentService + '\'' +
+                ", kindOfVilla=" + kindOfRoom +
+                ", areaPoolVilla=" + areaPool +
+                ", floorVilla='" + floor + '\'' +
                 '}';
     }
 }
