@@ -41,7 +41,6 @@ public class StudentService implements IStudentService{
 
         }else {
             studentRepo.remove(index);
-
         }
 
     }
